@@ -143,7 +143,7 @@ def _extract_labels(label_filename):
   """
   print('Extracting labels from: ', label_filename)
   label_file = tf.gfile.FastGFile(label_filename, 'rb').readlines()
-  label_lines = [line.rstrip('\n').split() for line in label_file]
+  label_lines = [line.rstrip(b'\n').split() for line in label_file]
   labels = {}
   for line in label_lines:
     assert len(line) == 2
