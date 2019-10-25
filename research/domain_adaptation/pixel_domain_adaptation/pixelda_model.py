@@ -282,7 +282,7 @@ def project_latent_vars(hparams, proj_shape, latent_vars, combine_method='sum'):
       # Project & reshape noise to a HxWxC input
       projected = slim.fully_connected(
           latent_vars[var],
-          np.prod(proj_shape),
+          np.prod(proj_shape).item(),
           activation_fn=tf.nn.relu,
           normalizer_fn=slim.batch_norm)
       values.append(tf.reshape(projected, [hparams.batch_size] + proj_shape))
