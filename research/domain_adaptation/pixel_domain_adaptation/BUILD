@@ -14,7 +14,7 @@ exports_files(["LICENSE"])
 package_group(
     name = "internal",
     packages = [
-        "//domain_adaptation/...",
+        "//research/domain_adaptation/...",
     ],
 )
 
@@ -72,7 +72,7 @@ py_binary(
         ":pixelda_preprocess",
         ":pixelda_utils",
         
-        "//domain_adaptation/datasets:dataset_factory",
+        "//research/domain_adaptation/datasets:dataset_factory",
     ],
 )
 
@@ -85,6 +85,6 @@ py_binary(
         ":pixelda_preprocess",
         ":pixelda_utils",
         
-        "//domain_adaptation/datasets:dataset_factory",
+        "//research/domain_adaptation/datasets:dataset_factory",
     ],
 )
