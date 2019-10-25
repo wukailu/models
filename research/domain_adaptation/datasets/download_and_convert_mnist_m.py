@@ -124,7 +124,7 @@ def _convert_dataset(split_name, filenames, filename_to_class_id, dataset_dir):
           height, width = image_reader.read_image_dims(sess, image_data)
 
           class_id = filename_to_class_id[filename]
-          example = dataset_utils.image_to_tfexample(image_data, 'png', height,
+          example = dataset_utils.image_to_tfexample(image_data, b'png', height,
                                                      width, class_id)
           tfrecord_writer.write(example.SerializeToString())
 
