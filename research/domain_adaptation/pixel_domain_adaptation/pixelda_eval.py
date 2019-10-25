@@ -165,7 +165,7 @@ def run_eval(run_dir, checkpoint_dir, hparams):
             name='Source Reconstruction')
       pixelda_utils.summarize_images(target_images, 'Target')
 
-      for name, value in names_to_values.iteritems():
+      for name, value in names_to_values.items():
         tf.summary.scalar(name, value)
 
       # Use the entire split by default
