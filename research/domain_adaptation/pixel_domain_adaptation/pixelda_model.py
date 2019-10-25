@@ -202,7 +202,7 @@ def create_model(hparams,
                     private_scope='transferred_task_classifier',
                     reuse_shared=True)
   # Remove any endpoints with None values
-  return dict((k, v) for k, v in end_points.iteritems() if v is not None)
+  return dict((k, v) for k, v in end_points.items() if v is not None)
 
 
 def batch_norm_params(is_training, batch_norm_decay):
