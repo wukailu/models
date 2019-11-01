@@ -179,7 +179,7 @@ def run_eval(run_dir, checkpoint_dir, hparams):
           checkpoint_path=checkpoint_path,
           logdir=run_dir,
           num_evals=num_batches,
-          eval_op=names_to_updates.values(),
+          eval_op=list(names_to_updates.values()), #names_to_updates.values(),
           final_op=names_to_values)
 
 
